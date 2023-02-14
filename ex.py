@@ -6,7 +6,7 @@ Created on Sun May  8 23:35:59 2022
 """
 import cv2
 import pyautogui as pag
-import PIL
+import PIL,os
 import numpy as np
 from time import sleep
 
@@ -44,6 +44,7 @@ def find_ex_up():
         # print(anle)
         pag.click(1425,969)
         sleep(0.1)
+    os.remove('b.png')
         
 def scroll():
     pag.moveTo(400,700)

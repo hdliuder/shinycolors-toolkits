@@ -2,6 +2,8 @@ import pyautogui as pag
 import keyboard
 import time
 import ex
+import timer
+
 
 jing = 1
 pag.PAUSE = 0.01
@@ -80,19 +82,19 @@ def learn():
 
 def full():
     pag.click()
-    time.sleep(1.25)
+    timer.delayMicrosecond(1.25)
     pag.click()
     
     
 def half2():
     pag.click()
-    time.sleep(1.17)
+    timer.delayMicrosecond(1.17)
     pag.click()
 
 
 def dead():
     pag.click()
-    time.sleep(1.05)
+    timer.delayMicrosecond(1.05)
     pag.click()
 
 def signup():
