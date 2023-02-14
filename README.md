@@ -3,8 +3,10 @@
 ![Snipaste_2023-02-14_23-06-18](https://user-images.githubusercontent.com/64121758/218778457-ddd1b0fc-de5b-4d04-bf46-de47d5df2e32.png)
 
 使用方法：下载release里的zip，解压后运行exe。多半会报毒，怕危险可以自己装个python直接跑代码。
-a.png和aa.png用于拆ex技能时候识别，别弄没了（以后一定规范命名）。
-运行提示inited后即可使用。
+
+a.png和aa.png用于拆ex技能时候识别，别弄没了（以后一定规范命名doge）。
+
+运行提示inited后即可使用。按esc退出。
 
 
 z：鼠标左键连点
@@ -24,7 +26,7 @@ p：打印当前鼠标位置，用于改坐标。
 
 alt+1：输入切换用网址
 
-alt+L：快速拆卸ex技能
+alt+L：快速拆卸ex技能。若出现错误识别导致的抽风，使劲将鼠标甩至屏幕左上角即可停止。
 
 alt+x：关闭热键
 
