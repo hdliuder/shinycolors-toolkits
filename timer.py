@@ -1,9 +1,8 @@
 import time
 
-def delayMicrosecond(t):
+def delay(t):
     start,end = 0,0
     start = time.time()
-    t = (t-1000)/1000000
     while end-start < t:
         end = time.time()
 

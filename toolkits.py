@@ -82,20 +82,22 @@ def learn():
 
 def full():
     pag.click()
-    timer.delayMicrosecond(1.25)
+    timer.delay(1.250)
     pag.click()
     
     
 def half2():
     pag.click()
-    timer.delayMicrosecond(1.17)
+    timer.delay(1.170)
     pag.click()
 
 
 def dead():
     pag.click()
-    timer.delayMicrosecond(1.05)
+    print('a')
+    timer.delay(1.050)
     pag.click()
+    print('v')
 
 def signup():
     keyboard.add_hotkey('alt+x',unsign)
