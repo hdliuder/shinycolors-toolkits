@@ -1,5 +1,6 @@
 # 闪耀色彩工具箱 shinycolors-toolkit
 本工具大部分功能是写死的坐标，因此只能在1920x1080分辨率下，且浏览器布局与图示相同的情况下才能使用
+![Snipaste_2023-02-14_23-06-18](https://user-images.githubusercontent.com/64121758/218778457-ddd1b0fc-de5b-4d04-bf46-de47d5df2e32.png)
 
 z：鼠标左键连点
 
