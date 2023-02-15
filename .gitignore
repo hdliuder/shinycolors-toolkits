@@ -2,3 +2,6 @@
 pack.bat
 toolkits.spec
 upx.exe
+__pycache__/ex.cpython-39.pyc
+__pycache__/timer.cpython-39.pyc
+.vscode/settings.json
