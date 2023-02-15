@@ -34,3 +34,6 @@ alt+x：关闭热键
 
 alt+z：恢复热键。注意别按两遍，按多了可以用alt+x取消。
 
+
+#Todo
+集成数字识别+step计算器,增加matchlive清体力功能
