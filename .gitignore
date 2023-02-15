@@ -1,3 +1,4 @@
-upx.exe
+.vscode/settings.json
 pack.bat
 toolkits.spec
+upx.exe

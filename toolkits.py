@@ -1,5 +1,5 @@
 import pyautogui as pag
-import keyboard
+import keyboard,os
 import time
 import ex
 import timer
@@ -99,6 +99,35 @@ def dead():
     pag.click()
     print('v')
 
+def ml(copyed=False):
+    if copyed == False:
+        pag.moveTo(412,52)
+        pag.click()
+        pag.hotkey('ctrl','a')
+        pag.hotkey('ctrl','c')
+
+    pag.moveTo(1670,963)
+    pag.click()
+
+    timer.delay(3)
+    pag.moveTo(412,52)
+    pag.click()
+    pag.hotkey('ctrl','a')
+    pag.hotkey('ctrl','v')
+    pag.hotkey('enter')
+
+
+def ml_auto():
+    timer.delay(1)
+    pag.moveTo(412,52)
+    pag.click()
+    pag.hotkey('ctrl','a')
+    pag.hotkey('ctrl','c')
+    while(1):
+        ml(True)
+        timer.delay(6)
+
+
 def signup():
     keyboard.add_hotkey('alt+x',unsign)
     
@@ -117,6 +146,8 @@ def signup():
     keyboard.add_hotkey('w',half2)
     keyboard.add_hotkey('e',dead)
 
+    keyboard.add_hotkey('m',ml)
+    keyboard.add_hotkey('alt+m',ml_auto)
 def unsign():
     keyboard.unhook_all_hotkeys()
     keyboard.add_hotkey('alt+z',signup)
@@ -130,7 +161,11 @@ def skip():
     pag.moveTo(1722,146)
     pag.click()
 
-print('run')
+
+
+
+print('initing')
 signup()
 keyboard.add_hotkey('alt+x',unsign)
 print('inited')
+keyboard.wait('esc')
