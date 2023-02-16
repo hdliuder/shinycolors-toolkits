@@ -109,7 +109,7 @@ def ml(copyed=False):
     pag.moveTo(1670,963)
     pag.click()
 
-    timer.delay(3)
+    time.sleep(4)
     pag.moveTo(412,52)
     pag.click()
     pag.hotkey('ctrl','a')
@@ -125,7 +125,7 @@ def ml_auto():
     pag.hotkey('ctrl','c')
     while(1):
         ml(True)
-        timer.delay(6)
+        time.sleep(60*30)
 
 
 def signup():
