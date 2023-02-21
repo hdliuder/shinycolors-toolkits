@@ -163,7 +163,7 @@ def make_cake():
     return
 
 def check_yingye():
-    return yingye
+    return 
 
 def re_yingye():
     return
