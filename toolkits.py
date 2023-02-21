@@ -60,16 +60,13 @@ def switch():
         jing = 1
     pag.moveTo(318,845)
     time.sleep(0.1)
-
 def clicking():
     while keyboard.is_pressed('z'):
         pag.click()
-
 def go_da():
     pag.moveTo(448,698)
     pag.click()
     pag.moveTo(806,765)
-
 def learn():
     x,y = pag.position()
     pag.moveTo(1670,963)
@@ -83,19 +80,16 @@ def full():
     pag.click()
     timer.delay(1.250)
     pag.click()
-    
 def half2():
     pag.click()
     timer.delay(1.170)
     pag.click()
-
 def dead():
     pag.click()
     print('a')
     timer.delay(1.050)
     pag.click()
     print('v')
-
 def auto_chudao():
     health = get_info.check_health()
     if health == '':
@@ -105,7 +99,7 @@ def auto_chudao():
     elif health == '':
         dead()
     else:
-        pass
+        print('?')
 
 def ml(copyed=False):
     if copyed == False:
@@ -123,7 +117,6 @@ def ml(copyed=False):
     pag.hotkey('ctrl','a')
     pag.hotkey('ctrl','v')
     pag.hotkey('enter')
-
 def ml_auto():
     timer.delay(1)
     pag.moveTo(412,52)
@@ -162,7 +155,6 @@ def unsign():
 def s1():
     pag.moveTo(990,926)
     pag.click()
-
 def skip():
     pag.moveTo(1722,146)
     pag.click()
