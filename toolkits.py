@@ -96,6 +96,17 @@ def dead():
     pag.click()
     print('v')
 
+def auto_chudao():
+    health = get_info.check_health()
+    if health == '':
+        pass
+    elif health == '':
+        pass
+    elif health == '':
+        pass
+    else:
+        pass
+
 def ml(copyed=False):
     if copyed == False:
         pag.moveTo(412,52)
