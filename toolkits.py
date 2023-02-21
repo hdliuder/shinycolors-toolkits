@@ -99,11 +99,11 @@ def dead():
 def auto_chudao():
     health = get_info.check_health()
     if health == '':
-        pass
+        full()
     elif health == '':
-        pass
+        half2()
     elif health == '':
-        pass
+        dead()
     else:
         pass
 
