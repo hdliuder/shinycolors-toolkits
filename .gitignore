@@ -974,3 +974,4 @@ venv/Scripts/python.exe
 venv/Scripts/pythonw.exe
 __pycache__/ex.cpython-38.pyc
 __pycache__/timer.cpython-38.pyc
+mail.py
