@@ -3,6 +3,7 @@ import keyboard,os
 import time
 import ex
 import timer
+import get_info
 
 
 jing = 1
@@ -78,19 +79,15 @@ def learn():
     pag.click()
     pag.moveTo(x,y)
 
-
-
 def full():
     pag.click()
     timer.delay(1.250)
     pag.click()
     
-    
 def half2():
     pag.click()
     timer.delay(1.170)
     pag.click()
-
 
 def dead():
     pag.click()
@@ -116,7 +113,6 @@ def ml(copyed=False):
     pag.hotkey('ctrl','v')
     pag.hotkey('enter')
 
-
 def ml_auto():
     timer.delay(1)
     pag.moveTo(412,52)
@@ -126,7 +122,6 @@ def ml_auto():
     while(1):
         ml(True)
         time.sleep(60*30)
-
 
 def signup():
     keyboard.add_hotkey('alt+x',unsign)
@@ -161,8 +156,14 @@ def skip():
     pag.moveTo(1722,146)
     pag.click()
 
+def make_cake():
+    return
 
+def check_yingye():
+    return yingye
 
+def re_yingye():
+    return
 
 print('initing')
 signup()
