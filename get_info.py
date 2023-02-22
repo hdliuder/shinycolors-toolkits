@@ -26,12 +26,12 @@ def check_tili():
     pag.click()
     # pag.typewrite('baidu.com')
     #pag模块受中文输入法影响,因此选择keyboard模块
-    keyboard.write('baidu.com')
+    keyboard.write('https://shinycolors.enza.fun/home')
     pag.press('enter')
     pag.press('enter')
     sleep(4)
-    bg = PIL.ImageGrab.grab(bbox=(960, 0, 1920, 1080))
-    rgb = bg.getpixel((10,10))
+    bg = PIL.ImageGrab.grab(bbox=(960, 540, 1920, 1080))
+    rgb = bg.getpixel((1592-960,990-540))
     if rgb == (10,10,10):
         return 'full'
     else:
@@ -47,7 +47,7 @@ def check_yingye():
     pag.press('enter')
     sleep(4)
     bg = PIL.ImageGrab.grab(bbox=(960, 540, 1920, 1080))
-    rgb = bg.getpixel((10,10))
+    rgb = bg.getpixel((1425-960,900-540))
     if rgb == (10,10,10):
         return 'done'
     else:
