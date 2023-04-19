@@ -138,24 +138,46 @@ def signup():
     keyboard.add_hotkey('x', switch)
     keyboard.add_hotkey('c', go_da)
     keyboard.add_hotkey('v', learn)
-    keyboard.add_hotkey('b', s1)
+    keyboard.add_hotkey('n', s1)
     keyboard.add_hotkey('g', skip)
     
     keyboard.add_hotkey('q',full)
     keyboard.add_hotkey('w',half2)
     keyboard.add_hotkey('e',dead)
 
-    keyboard.add_hotkey('m',ml)
-    keyboard.add_hotkey('alt+m',ml_auto)
+    # keyboard.add_hotkey('m',ml)
+    # keyboard.add_hotkey('alt+m',ml_auto)
 
     keyboard.add_hotkey('a',pingwei1)
     keyboard.add_hotkey('s',pingwei2)
     keyboard.add_hotkey('d',pingwei3)
 
-    keyboard.add_hotkey('1',dao1)
-    keyboard.add_hotkey('2',dao2)
-    keyboard.add_hotkey('3',dao3)
-    keyboard.add_hotkey('4',autoon)
+    keyboard.add_hotkey('b',dao1)
+    keyboard.add_hotkey('m',dao3)
+    keyboard.add_hotkey(',',autoon)
+
+    keyboard.add_hotkey('r',shijing)
+    keyboard.add_hotkey(2,lambda: shijingN(1))
+    keyboard.add_hotkey(3,lambda: shijingN(2))
+    keyboard.add_hotkey(4,lambda: shijingN(3))
+    keyboard.add_hotkey(5,lambda: shijingN(4))
+    keyboard.add_hotkey(6,lambda: shijingN(5))
+    keyboard.add_hotkey(7,lambda: shijingN(6))
+    keyboard.add_hotkey(8,lambda: shijingN(7))
+    keyboard.add_hotkey(9,lambda: shijingN(8))
+    keyboard.add_hotkey(11,lambda: shijingM(10))
+
+    keyboard.add_hotkey('h',kc1)
+    keyboard.add_hotkey('j',kc2)
+    keyboard.add_hotkey('k',kc3)
+    keyboard.add_hotkey('l',kc4)
+    keyboard.add_hotkey(';',kc5)
+    keyboard.add_hotkey('\'',kc6)
+
+    keyboard.add_hotkey(75,cc1)
+    keyboard.add_hotkey(72,cc2)
+    keyboard.add_hotkey(77,cc3)
+
 def unsign():
     keyboard.unhook_all_hotkeys()
     keyboard.add_hotkey('alt+z',signup)
@@ -197,6 +219,50 @@ def autoon():
     pag.moveTo(1501,126)
     pag.click()
 
+def shijing():
+    pag.moveTo(252,699)
+    pag.click()
+
+def shijingN(n):
+    x,y = pag.position()
+    pag.moveTo(1656,512)
+    pag.click(clicks=n)
+    pag.moveTo(x,y)
+
+def shijingM(n):
+    x,y = pag.position()
+    pag.moveTo(590,512)
+    pag.click(clicks=n)
+    pag.moveTo(x,y)
+
+def kc1():
+    pag.moveTo(586,726)
+    pag.click()
+def kc2():
+    pag.moveTo(825,726)
+    pag.click()
+def kc3():
+    pag.moveTo(1057,726)
+    pag.click()
+def kc4():
+    pag.moveTo(1226,726)
+    pag.click()
+def kc5():
+    pag.moveTo(1435,726)
+    pag.click()
+def kc6():
+    pag.moveTo(1674,726)
+    pag.click()
+
+def cc1():
+    pag.moveTo(412,398)
+    pag.click()
+def cc2():
+    pag.moveTo(959,254)
+    pag.click()
+def cc3():
+    pag.moveTo(1492,391)
+    pag.click()
 print('initing')
 signup()
 keyboard.add_hotkey('alt+x',unsign)
