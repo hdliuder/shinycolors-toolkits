@@ -147,6 +147,15 @@ def signup():
 
     keyboard.add_hotkey('m',ml)
     keyboard.add_hotkey('alt+m',ml_auto)
+
+    keyboard.add_hotkey('a',pingwei1)
+    keyboard.add_hotkey('s',pingwei2)
+    keyboard.add_hotkey('d',pingwei3)
+
+    keyboard.add_hotkey('1',dao1)
+    keyboard.add_hotkey('2',dao2)
+    keyboard.add_hotkey('3',dao3)
+    keyboard.add_hotkey('4',autoon)
 def unsign():
     keyboard.unhook_all_hotkeys()
     keyboard.add_hotkey('alt+z',signup)
@@ -167,6 +176,26 @@ def check_yingye():
 
 def re_yingye():
     return
+
+def pingwei1():
+    pag.moveTo(200,291)
+def pingwei2():
+    pag.moveTo(200,529)
+def pingwei3():
+    pag.moveTo(200,760)
+
+def dao1():
+    pag.moveTo(747,960)
+    pag.click()
+def dao2():
+    pag.moveTo(1056,960)
+    pag.click()
+def dao3():
+    pag.moveTo(1366,960)
+    pag.click()
+def autoon():
+    pag.moveTo(1501,126)
+    pag.click()
 
 print('initing')
 signup()
