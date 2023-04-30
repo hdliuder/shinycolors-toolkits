@@ -9,11 +9,37 @@ import get_info
 jing = 1
 pag.PAUSE = 0.01
 
+zoom = None
+def calzoom():
+    print('s')
+    x0,y0 = pag.position()
+    keyboard.remove_hotkey('o')
+    keyboard.add_hotkey('o',lambda:calzoom2(x0,y0))
 
+def calzoom2(x0,y0):
+    x1,y1 = pag.position()
+
+    zx = (x1-x0)/(1819-100)
+    zy = (y1-y0)/(1039-71)
+    #x、y轴偏移和放大率
+    global zoom
+    zoom = [x0,y0,zx,zy]
+    print(zoom)
+    keyboard.remove_hotkey('o')
+    keyboard.add_hotkey('o',calzoom)
+
+def mvto(x,y):
+    global zoom
+    if zoom:
+        x = (x-100)*zoom[2]+zoom[0]
+        y = (y-71)*zoom[3]+zoom[1]
+        pag.moveTo(x,y)
+    else:
+        pag.moveTo(x,y)
 
 def typein():
     pag.PAUSE = 0.1
-    pag.moveTo(412,52)
+    mvto(412,52)
     pag.click()
     pag.hotkey('ctrl','a')
     pag.typewrite(r'https://shinycolors.enza.fun/produce/?a=')
@@ -23,7 +49,7 @@ def typein():
     
 def typein2():
     pag.PAUSE = 0.1
-    pag.moveTo(412,52)
+    mvto(412,52)
     pag.click()
     pag.hotkey('ctrl','a')
     pag.typewrite(r'https://shinycolors.enza.fun/produce/?a=#')
@@ -33,7 +59,7 @@ def typein2():
     
 def typein0():
     time.sleep(0.4)
-    pag.moveTo(412,52)
+    mvto(412,52)
     pag.click(clicks=3)
     
     pag.typewrite(r'https://shinycolors.enza.fun/produce/?a=')
@@ -58,21 +84,21 @@ def switch():
     else:
         pag.hotkey('alt','right')
         jing = 1
-    pag.moveTo(318,845)
+    mvto(318,845)
     time.sleep(0.1)
 def clicking():
     while keyboard.is_pressed('z'):
         pag.click()
 def go_da():
-    pag.moveTo(448,698)
+    mvto(448,698)
     pag.click()
-    pag.moveTo(806,765)
+    mvto(806,765)
 def learn():
     x,y = pag.position()
-    pag.moveTo(1670,963)
+    mvto(1670,963)
     pag.click()
     time.sleep(0.05)
-    pag.moveTo(1095,785)
+    mvto(1095,785)
     pag.click()
     pag.moveTo(x,y)
 
@@ -103,23 +129,23 @@ def auto_chudao():
 
 def ml(copyed=False):
     if copyed == False:
-        pag.moveTo(412,52)
+        mvto(412,52)
         pag.click()
         pag.hotkey('ctrl','a')
         pag.hotkey('ctrl','c')
 
-    pag.moveTo(1670,963)
+    mvto(1670,963)
     pag.click()
 
     time.sleep(4)
-    pag.moveTo(412,52)
+    mvto(412,52)
     pag.click()
     pag.hotkey('ctrl','a')
     pag.hotkey('ctrl','v')
     pag.hotkey('enter')
 def ml_auto():
     timer.delay(1)
-    pag.moveTo(412,52)
+    mvto(412,52)
     pag.click()
     pag.hotkey('ctrl','a')
     pag.hotkey('ctrl','c')
@@ -178,16 +204,18 @@ def signup():
     keyboard.add_hotkey(72,cc2)
     keyboard.add_hotkey(77,cc3)
 
+    keyboard.add_hotkey('o',calzoom)
+
 def unsign():
     keyboard.unhook_all_hotkeys()
     keyboard.add_hotkey('alt+z',signup)
     print('unsigned')
     
 def s1():
-    pag.moveTo(990,926)
+    mvto(990,926)
     pag.click()
 def skip():
-    pag.moveTo(1722,146)
+    mvto(1722,146)
     pag.click()
 
 def make_cake():
@@ -200,69 +228,78 @@ def re_yingye():
     return
 
 def pingwei1():
-    pag.moveTo(200,291)
+    mvto(200,291)
 def pingwei2():
-    pag.moveTo(200,529)
+    mvto(200,529)
 def pingwei3():
-    pag.moveTo(200,760)
+    mvto(200,760)
 
 def dao1():
-    pag.moveTo(747,960)
+    mvto(747,960)
     pag.click()
 def dao2():
-    pag.moveTo(1056,960)
+    mvto(1056,960)
     pag.click()
 def dao3():
-    pag.moveTo(1366,960)
+    mvto(1366,960)
     pag.click()
 def autoon():
-    pag.moveTo(1501,126)
+    mvto(1501,126)
     pag.click()
 
 def shijing():
-    pag.moveTo(252,699)
+    mvto(252,699)
     pag.click()
 
 def shijingN(n):
     x,y = pag.position()
-    pag.moveTo(1656,512)
+    mvto(1656,512)
     pag.click(clicks=n)
     pag.moveTo(x,y)
 
 def shijingM(n):
     x,y = pag.position()
-    pag.moveTo(590,512)
+    mvto(590,512)
     pag.click(clicks=n)
     pag.moveTo(x,y)
 
 def kc1():
-    pag.moveTo(586,726)
+    mvto(586,726)
     pag.click()
 def kc2():
-    pag.moveTo(825,726)
+    mvto(825,726)
     pag.click()
 def kc3():
-    pag.moveTo(1057,726)
+    mvto(1057,726)
     pag.click()
 def kc4():
-    pag.moveTo(1226,726)
+    mvto(1226,726)
     pag.click()
 def kc5():
-    pag.moveTo(1435,726)
+    mvto(1435,726)
     pag.click()
 def kc6():
-    pag.moveTo(1674,726)
+    mvto(1674,726)
     pag.click()
 
 def cc1():
-    pag.moveTo(412,398)
+    x,y = pag.position()
+    mvto(412,398)
     pag.click()
+    pag.moveTo(x,y)
+
 def cc2():
-    pag.moveTo(959,254)
+    x,y = pag.position()
+    mvto(959,254)
     pag.click()
+    pag.moveTo(x,y)
+
 def cc3():
-    pag.moveTo(1492,391)
+    x,y = pag.position()
+    mvto(1492,391)
     pag.click()
+    pag.moveTo(x,y)
+
 print('initing')
 signup()
 keyboard.add_hotkey('alt+x',unsign)
